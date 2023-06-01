@@ -8,12 +8,40 @@
 </head>
 <body>
     <center>
-        <h1>Data is rendered from Backend</h1>
+        <h1>Demonstration of Jinja Conditional Tags</h1>
+        <!--
+        <h1>demonstration of is else</h1>
         {% if a > b %}
             <h1>{{a}} is greater than {{b}}</h1>
         {% else %}
             <h1>{{b}} is greater than {{a}}</h1>
         {% endif %}
+        -->
+        <!--
+        <h1>Demonstration of if elif</h1>
+        {% if a > b and a > c %}
+            <h1>a is Maximum</h1>
+        {% elif b > c %}
+            <h1>b is Maximum</h1>
+        {% else %}
+            <h1>c is maximum</h1>
+        {% endif %}
+        -->
+        <h1>Demonstration of Nested if</h1>
+        {% if a > b %}
+            {% if a > c %}
+                <h1>a is maximum</h1>
+            {% else %}
+                <h1>c is maximum</h1>
+            {% endif %}
+        {% else %}
+            {% if b > c%}
+                <h1>b is maximum</h1>
+            {% else %}
+                <h1>c is maximum</h1>
+            {% endif %}
+        {% endif %}
+
     </center>
 </body>
 </html>
